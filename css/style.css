@@ -32,7 +32,7 @@ body {
   margin: 1.2em;
   background-size: cover;
   background-position: center;
-  background-image: url("file:/Users/Felipecab/Desktop/339/hw4-2021/images/pigeon-background.JPEG");
+  background-image: url("/images/pigeon-background.JPEG");
   background-repeat: no-repeat;
   background-color: #dddddd;
 }
