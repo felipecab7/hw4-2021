@@ -35,8 +35,6 @@ body {
   background-image: url("file:/Users/Felipecab/Desktop/339/hw4-2021/images/pigeon-background.JPEG");
   background-repeat: no-repeat;
   background-color: #dddddd;
-
-  /*Req 1*/
 }
 
 h1 {
@@ -48,9 +46,6 @@ h1 {
 }
 
 p {
-  padding-top: 15px;
-
-  /*Req 3*/
 }
 
 .datacite {
@@ -61,15 +56,12 @@ a {
   font-size: 16px;
   color: #c12258;
   text-decoration-style: wavy;
-
-  /*Req 4*/
 }
 
-/*Req 5*/
-
 table {
-  border: solid black 2px;
-  border-collapse: collapse; /*Collapses borders/
+  border-collapse: separate; /*Collapses borders*/
+  border: 2px solid black;
+  border-radius: 10px;
   border-spacing: 0px; /*Size of table*/
   table-layout: auto; /*Size of table*/
   white-space: nowrap; /*No wrapping of cells*/
@@ -78,10 +70,14 @@ table {
   margin-left: auto; /*Centers table*/
 }
 
-tr {
-  display: table-row;
-  vertical-align: inherit;
-  border-color: inherit;
+td {
+  border-top: 2px solid black;
+  padding: 10px;
+}
+
+tr .rowhead {
+  border-top: 2px solid black;
+  padding: 10px;
 }
 
 thead {
@@ -92,9 +88,7 @@ thead {
 }
 
 tbody tr {
-  border-top: 2px solid black;
   padding: 10px;
-  overflow: hidden;
 }
 
 tbody tr th {
@@ -102,34 +96,30 @@ tbody tr th {
   width: 125px;
 }
 
-/*Add selector and rule here*/
-
-/*Req 6a*/
-td {
-  border-top: 1px solid #ddd;
-  padding: 10px;
+tr td:nth-child(2) {
+  border-left: 2px solid #000;
 }
 
-/*Req 6b*/
 .colhead {
-  padding: 0%;
 }
-/*Req 6c*/
+
 .rowhead {
 }
 
-/*Req 6d*/
-/*Req 6e*/
-/*Req 6f*/
+tbody tr {
+  border: 2px solid black;
+}
 
-/*Req 7*/
+tbody tr:first-child {
+  border-right: 2px solid black;
+}
 
 thead tr:first-child th:first-child {
   padding: 10px;
   width: 125px;
 }
 
-table tr:first-child th:first-child {
+thead tr:first-child th:first-child {
   border-top-left-radius: 10px;
 }
 
@@ -155,16 +145,21 @@ thead tr th {
   vertical-align: center;
 }
 
-/*Add selectors and rules here*/
-
 tr:nth-child(even) {
   background-color: #d1d1d1;
 }
 
-/*Req 8*/
+tr:hover {
+  background-color: rgba(126, 8, 32, 0.25);
+}
+
 footer {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 75px;
   width: 100%;
   background: #000000;
-  text-align: center;
   color: #ffffff;
 }
