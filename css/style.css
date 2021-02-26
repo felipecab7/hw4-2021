@@ -27,6 +27,7 @@ tr {
 body {
   color: #000000;
   font-size: 16px;
+  text-align: center;
   font-family: "Andika", sans-serif;
   margin: 1.2em;
   background-size: cover;
@@ -43,11 +44,17 @@ h1 {
   font-size: 2em;
   text-align: center;
   line-height: 2;
+  margin: 0mm;
 }
 
 p {
   padding-top: 15px;
+
   /*Req 3*/
+}
+
+.datacite {
+  text-align: left;
 }
 
 a {
@@ -60,15 +67,47 @@ a {
 
 /*Req 5*/
 
+table {
+  border: solid black 2px;
+  border-collapse: collapse; /*Collapses borders/
+  border-spacing: 0px; /*Size of table*/
+  table-layout: auto; /*Size of table*/
+  white-space: nowrap; /*No wrapping of cells*/
+  width: 70%; /*Size of table*/
+  margin-right: auto; /*Centers table*/
+  margin-left: auto; /*Centers table*/
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+  border-collapse: separate;
+}
+
 tbody tr {
   border-top: 2px solid black;
   padding: 10px;
+  overflow: hidden;
+}
+
+tbody tr th {
+  padding: 10px;
+  width: 125px;
 }
 
 /*Add selector and rule here*/
 
 /*Req 6a*/
 td {
+  border-top: 1px solid #ddd;
+  padding: 10px;
 }
 
 /*Req 6b*/
@@ -84,11 +123,26 @@ td {
 /*Req 6f*/
 
 /*Req 7*/
-table {
-  border-collapse: collapse;
-}
 
 thead tr:first-child th:first-child {
+  padding: 10px;
+  width: 125px;
+}
+
+table tr:first-child th:first-child {
+  border-top-left-radius: 10px;
+}
+
+table tr:first-child th:last-child {
+  border-top-right-radius: 10px;
+}
+
+tbody tr:last-child th:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+tbody tr:last-child th:last-child {
+  border-bottom-right-radius: 10px;
 }
 
 thead tr th {
